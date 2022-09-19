@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Display</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="main">
+        <section class="machine-list-view" data-displayed="true">
+            <div class="machine-list-view-inner">
+                <form class="filter" data-displayed="true">
+                    <div class="field" data-name="id">
+                        <label class="field-label">ID:</label>
+                        <input class="input-text" type="text">
+                    </div>
+
+                    <div class="field" data-name="status">
+                        <label class="field-label">Status:</label>
+                        <div class="checkboxes">
+                            <div class="checkbox">
+                                <input class="input-checkbox" type="checkbox" data-value="idle" checked="true">
+                                <div class="checkbox-option-name">idle</div>
+                            </div>
+                            <div class="checkbox">
+                                <input class="input-checkbox" type="checkbox" data-value="running" checked="true">
+                                <div class="checkbox-option-name">running</div>
+                            </div>
+                            <div class="checkbox">
+                                <input class="input-checkbox" type="checkbox" data-value="finished" checked="true">
+                                <div class="checkbox-option-name">finished</div>
+                            </div>
+                            <div class="checkbox">
+                                <input class="input-checkbox" type="checkbox" data-value="errored" checked="true">
+                                <div class="checkbox-option-name">errored</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field" data-name="machine-type">
+                        <label class="field-label">Machine Type:</label>
+                        <div class="checkboxes">
+                            <div class="checkbox">
+                                <input class="input-checkbox" type="checkbox" data-value="measurement" checked="true">
+                                <div class="checkbox-option-name">measurement</div>
+                            </div>
+                            <div class="checkbox">
+                                <input class="input-checkbox" type="checkbox" data-value="microscope" checked="true">
+                                <div class="checkbox-option-name">microscope</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="field" data-name="sort-by">
+                        <label class="field-label">Sort by:</label>
+                        <select class="select">
+                            <option value="" selected="true"></option>
+                            <option value="id">ID</option>
+                            <option value="install_date">Install Date</option>
+                            <option value="last_maintenance">Last Maintenance</option>
+                        </select>
+                    </div>
+
+                    <div class="field" data-name="order">
+                        <label class="field-label">Order:</label>
+                        <select class="select" value="asc">
+                            <option value="asc">Ascending</option>
+                            <option value="desc">Descending</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-btns">
+                        <button class="search-btn" type="button">Search</button>
+                        <button class="reset-btn" type="button">Reset</button>
+                    </div>
+                </form>
+                <div class="loading-message machine-list-loading-message" data-displayed="false">Loading...</div>
+                <ul class="machine-list"></ul>
+            </div>
+        </section>
+
+        <section class="machine-detail-view" data-displayed="false">
+            <div class="machine-detail-view-inner">
+                <div class="machine-detail-btns">
+                    <button class="back-btn" type="button">Back</button>
+                    <button class="refresh-btn" type="button">Refresh</button>
+                </div>
+                <div class="loading-message machine-detail-loading-message" data-displayed="false">Loading...</div>
+                <div class="machine-detail-holder"></div>
+            </div>
+        </section>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+body {
+    margin: 0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.loading-message {
+    width: 100%;
+    margin: 16px 0 0 0;
+    text-align: center;
+}
+.loading-message[data-displayed="false"] {
+    display: none;
+}
+
+.machine-list-view {
+    display: flex;
+    width: 100%;
+    padding: 32px 0;
+    flex-direction: column;
+    align-items: center;
+}
+.machine-list-view[data-displayed="false"] {
+    display: none;
+}
+
+.machine-list-view-inner {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.filter {
+    display: flex;
+    width: 100%;
+    margin: 8px 0 0 0;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.field {
+    display: flex;
+    width: 100%;
+    margin: 8px 0 0 0;
+}
+.field:first-child {
+    margin: 0;
+}
+
+.field-label {
+    display: flex;
+    width: 150px;
+}
+
+.input-text {
+    display: flex;
+    width: 400px;
+}
+
+.checkboxes {
+    display: flex;
+}
+
+.checkbox {
+    display: flex;
+    margin: 0 0 0 16px;
+}
+.checkbox:hover {
+    cursor: pointer;
+}
+.checkbox:first-child {
+    margin: 0;
+}
+
+.input-checkbox {
+    display: flex;
+    pointer-events: none;
+}
+
+.checkbox-option-name {
+    margin: 0 0 0 4px;
+    pointer-events: none;
+    user-select: none;
+}
+
+.filter-btns {
+    display: flex;
+    margin: 8px 0 0 0;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.reset-btn {
+    margin: 0 0 0 8px;
+}
+
+.machine-list {
+    display: flex;
+    width: 100%;
+    margin: 32px 0 0 0;
+    flex-direction: column;
+}
+
+.machine-item {
+    display: flex;
+    margin: 8px 0 0 0;
+    padding: 16px;
+    border: 1px solid #cccccc;
+    flex-direction: column;
+}
+.machine-item:first-child {
+    margin: 0;
+}
+
+.machine-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.machine-infos {
+    display: flex;
+    flex-direction: column;
+}
+
+.machine-info {
+    display: flex;
+}
+
+.machine-info-key {
+    display: flex;
+    width: 150px;
+}
+
+.machine-info-value {
+    display: flex;
+}
+
+.machine-detail-view {
+    display: flex;
+    width: 100%;
+    padding: 32px 0;
+    flex-direction: column;
+    align-items: center;
+}
+.machine-detail-view[data-displayed="false"] {
+    display: none;
+}
+
+.machine-detail-view-inner {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    flex-direction: column;
+}
+
+.machine-detail-view-btns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.refresh-btn {
+    margin: 0 0 0 8px;
+}
+
+.machine-detail-holder {
+    display: flex;
+    margin: 32px 0 0 0;
+    flex-direction: column;
+}
+
+.machine-detail-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-list-label {
+    margin: 32px 0 0 0;
+}
+
+.event-list {
+    display: flex;
+    margin: 8px 0 0 0;
+    flex-direction: column;
+}
+
+.event-item {
+    display: flex;
+    margin: 8px 0 0 0;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    justify-content: flex-start;
+    align-items: center;
+}
+.event-item:first-child {
+    margin: 0;
+}
+
+.event-item-status {
+    display: flex;
+    width: 150px;
+}
+
+.event-item-timestamp {
+    display: flex;
+}
